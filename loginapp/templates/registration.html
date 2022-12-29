@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .container{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="registration">
+            <h1>Registraion</h1>
+            <form action="/register" method="post">
+            {%csrf_token%}
+            <div>First_name:<input type="text" name="Name"></div>
+            <div>Last_name:<input type="text" name="Lname"></div>
+            <div>Email:<input type="text" name="Email"></div>
+            <div>Password:<input type="password" name="password"></div>
+            <div>confirm password:<input type="password" name="cpassword"></div>
+            <button>Register</button>
+            </form>
+         </div>
+        <div class="login">
+            <form action="/login" method="post">
+            {%csrf_token%}
+            <div>Email:<input type="text" name="Email"></div>
+            <div>password:<input type="password" name="password"></div>
+            <button>login</button>
+
+        </div>
+            </form>
+            
+    </div>
+</body>
+</html>
